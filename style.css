@@ -6,6 +6,16 @@
   color: var(--theme-color) !important;
 }
 
+svg {
+  fill: var(--theme-color);
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -171,4 +181,31 @@ body {
   left: -4px;
   fill: var(--theme-color) !important;
   width: 4px;
+}
+
+.why-us-icons-background {
+  width: 64px;
+  height: 64px;
+  background-color: var(--theme-color);
+  border-radius: 50%;
+  padding: 8px;
+  margin-left: -25px;
+}
+
+.white-icon {
+  fill: white !important;
+}
+
+.green-line {
+  border: 2px solid var(--theme-color);
+  width: 100%;
+  margin-left: -25px;
+}
+
+.why-us-text {
+  font-size: 18px;
+}
+
+.why-us-row {
+  margin-top: 27px;
 }
