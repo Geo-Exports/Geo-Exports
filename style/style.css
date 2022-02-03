@@ -147,7 +147,7 @@ body {
 }
 
 .transparent-background-image {
-  background-image: url(./images/Harbor.jpg);
+  background-image: url(../images/Harbor.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
@@ -295,7 +295,7 @@ body {
 }
 
 .service-form {
-  background-image: url(/images/areo-shipping.jpg);
+  background-image: url(../images/areo-shipping.jpg);
 }
 
 .transparent-background {
