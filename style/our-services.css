@@ -1,0 +1,248 @@
+:root {
+  --theme-color: #eb0028;
+}
+
+.text-theme {
+  color: var(--theme-color) !important;
+}
+
+svg {
+  fill: var(--theme-color);
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.header-email {
+  margin-right: 8px;
+}
+
+.header-phone {
+  margin-left: 8px;
+}
+
+.header-container {
+  background-color: #2f2f2f;
+  padding: 5px 0px;
+  color: white;
+}
+
+.contain-max-width {
+  max-width: 1140px;
+  margin: 0px auto;
+}
+
+.carousel-item {
+  background-size: cover;
+}
+
+.title-carousel {
+  height: 30rem;
+}
+
+.slide-1 {
+  background-image: url(./images/cargo-ship.jpg);
+}
+
+.slide-2 {
+  background-image: url(./images/areo-shipping.jpg);
+}
+
+.carousel-caption {
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  bottom: 1.25rem;
+
+  padding-top: 9.9rem;
+  padding-bottom: 1.25rem;
+  color: #fff;
+  text-align: center;
+}
+
+.text-red {
+  color: var(--theme-color);
+}
+
+.red-button {
+  background-color: var(--theme-color) !important;
+  padding: 12px 30px;
+}
+
+.white-box {
+  background-color: white;
+  color: #444444;
+  text-align: center;
+  padding: 72px 0px;
+}
+
+.card-underline {
+  width: 40px;
+  height: 2px;
+  margin-top: -4px;
+  margin-bottom: 16px;
+  background-color: var(--theme-color);
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
+.read-more-arrow {
+  margin-left: 3px;
+}
+
+.card-read-more {
+  display: inline;
+}
+
+.service-read-more {
+  text-decoration: none;
+}
+
+.service-card-underline {
+  height: 2px;
+  width: 40px;
+  background-color: var(--theme-color);
+  margin-top: -4px;
+  margin-bottom: 1rem;
+}
+
+.service-card-triangle {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  fill: var(--theme-color);
+}
+
+.card-plus {
+  position: absolute;
+  font-size: 32px;
+  bottom: -3px;
+  right: 8px;
+  z-index: 1;
+  color: white;
+}
+
+.red-transparent {
+  background-color: rgba(235, 0, 40, 0.3);
+  padding: 111px 0px;
+  color: white;
+}
+
+.margin-provide-button {
+  margin-bottom: 34px;
+}
+
+.transparent-background-image {
+  background-image: url(/images/Harbor.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.card-underline-2 {
+  width: 100px !important;
+  margin-left: 15px;
+  background-color: var(--theme-color) !important;
+}
+
+.card-underline-row {
+  margin-left: 1px;
+}
+
+.card-underline-3 {
+  width: 5px !important;
+  background-color: var(--theme-color) !important;
+}
+
+.read-more-arrow {
+  fill: var(--theme-color);
+}
+
+.why-us-icons {
+  position: relative;
+  border-left: 2px solid var(--theme-color);
+}
+
+.red-vr {
+  height: 100px;
+  position: absolute;
+  left: -4px;
+  fill: var(--theme-color) !important;
+  width: 4px;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.footer-social {
+  background-color: #444444;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  border-radius: 50%;
+}
+
+.footer-social-icon {
+  width: 14px;
+  height: auto;
+  fill: white;
+  margin: 0 auto;
+}
+
+.footer-list {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 1em;
+  text-indent: -1em;
+  position: relative;
+}
+
+.footer-link {
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  font-weight: 700;
+}
+
+.footer-link-item::before {
+  content: "> ";
+}
+
+.footer-link-item:hover::after {
+  content: " ->";
+}
+
+.btn-primary:focus,
+.form-control:focus {
+  box-shadow: none;
+}
+
+.btn-primary {
+  background-color: var(--theme-color) !important;
+  border-color: var(--theme-color) !important;
+}
+
+.footer-form-button {
+  margin-left: auto;
+  position: relative;
+  bottom: 41px;
+  right: 8px;
+}
+
+.white-svg {
+  fill: white;
+}
