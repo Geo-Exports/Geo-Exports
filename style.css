@@ -49,11 +49,11 @@ body {
 }
 
 .slide-1 {
-  background-image: url(/images/cargo-ship.jpg);
+  background-image: url(../images/cargo-ship.jpg);
 }
 
 .slide-2 {
-  background-image: url(/images/areo-shipping.jpg);
+  background-image: url(../images/areo-shipping.jpg);
 }
 
 .carousel-caption {
@@ -147,7 +147,7 @@ body {
 }
 
 .transparent-background-image {
-  background-image: url(/images/Harbor.jpg);
+  background-image: url(../images/Harbor.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
