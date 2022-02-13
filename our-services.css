@@ -115,7 +115,7 @@ body {
 }
 
 .transparent-background-image {
-  background-image: url(/images/Harbor.jpg);
+  background-image: url(./images/Harbor.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
