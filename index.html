@@ -26,7 +26,7 @@
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
           <a class="navbar-brand text-danger fw-bold" href="#">
-            <img src="./images/logo.png" class="img-fluid" />
+            <img src="./images/logo.png" class="" height="48" />
           </a>
           <button
             class="navbar-toggler"
@@ -89,52 +89,26 @@
     </div>
 
     <div
-      id="carouselExampleFade"
-      class="carousel slide carousel-fade carousel-height"
+      id="carouselExampleControls"
+      class="carousel slide"
       data-bs-ride="carousel"
     >
-      <div class="carousel-inner title-carousel">
-        <div class="carousel-item active slide-1">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
           <img
-            src="./images/cargo-ship.jpg"
+            src="./images/areo-shipping.jpg"
             class="d-block w-100"
-            alt="SHIP WITH CARGO CONTAINER"
+            alt="..."
           />
-
-          <div class="carousel-caption">
-            <h3>WE ARE ACTIVE</h3>
-            <h2 class="text-red">Second slide label</h2>
-            <p>Some representative placeholder content for the second slide.</p>
-            <button type="button" class="btn red-button btn-sm">
-              GET FREE QUOTE
-            </button>
-          </div>
         </div>
-
-        <div class="carousel-item slide-2">
-          <img
-            src="./images/areo-shipping.jpg "
-            class="d-block w-100"
-            alt="AIR SHIPPING"
-          />
-          <div class="carousel-caption">
-            <h3>WE ARE PROUD</h3>
-            <h2 class="text-red">Second slide label</h2>
-            <p>Some representative placeholder content for the second slide.</p>
-            <button
-              type="button"
-              class="btn red-button btn-sm"
-              herf="./Contact-us.html"
-            >
-              CONTACT WITH US
-            </button>
-          </div>
+        <div class="carousel-item">
+          <img src="./images/cargo-ship.jpg" class="d-block w-100" alt="..." />
         </div>
       </div>
       <button
         class="carousel-control-prev"
         type="button"
-        data-bs-target="#carouselExampleFade"
+        data-bs-target="#carouselExampleControls"
         data-bs-slide="prev"
       >
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -143,13 +117,14 @@
       <button
         class="carousel-control-next"
         type="button"
-        data-bs-target="#carouselExampleFade"
+        data-bs-target="#carouselExampleControls"
         data-bs-slide="next"
       >
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
     </div>
+
     <div class="white-box">
       <div class="contain-max-width">
         <h2>OUR SERVICES</h2>
@@ -159,7 +134,7 @@
         </p>
         <div class="container">
           <div class="row">
-            <div class="col">
+            <div class="col-lg-4 col-sm-12 service-card-container">
               <div class="card">
                 <img
                   src="https://www.marinetraffic.com/blog/wp-content/uploads/2021/02/Cargo-lost-at-sea-1920x1080.png"
@@ -204,7 +179,7 @@
                 </div>
               </div>
             </div>
-            <div class="col">
+            <div class="col-lg-4 col-sm-12 service-card-container">
               <div class="card">
                 <img
                   src="https://www.marinetraffic.com/blog/wp-content/uploads/2021/02/Cargo-lost-at-sea-1920x1080.png"
@@ -251,7 +226,7 @@
                 </div>
               </div>
             </div>
-            <div class="col">
+            <div class="col-lg-4 col-sm-12 service-card-container">
               <div class="card">
                 <img
                   src="https://www.marinetraffic.com/blog/wp-content/uploads/2021/02/Cargo-lost-at-sea-1920x1080.png"
@@ -319,14 +294,14 @@
     <div class="white-box text-start">
       <div class="contain-max-width">
         <div class="row">
-          <div class="col">
+          <div class="col-lg-4 col-sm-12">
             <img
               class="img-fluid"
               src="./images/Hand-shaking.jpg"
               alt="Hand-shaking"
             />
           </div>
-          <div class="col">
+          <div class="col-lg-4 col-sm-12">
             <h3>WHY CHOOSE US?</h3>
             <div class="row card-underline-row">
               <div class="card-underline card-underline-3"></div>
@@ -359,7 +334,7 @@
             </svg>
           </div>
 
-          <div class="col why-us-icons">
+          <div class="col-lg-4 col-sm-12 why-us-icons">
             <div class="row why-us-row">
               <div class="col-3 center">
                 <div class="green-line"></div>
@@ -377,7 +352,7 @@
                   />
                 </svg>
               </div>
-              <div class="col-7 center why-us-text">WE ARE TRUSTED</div>
+              <div class="col-7 left sm-center why-us-text">WE ARE TRUSTED</div>
             </div>
             <div class="row why-us-row">
               <div class="col-3 center">
@@ -396,7 +371,9 @@
                   />
                 </svg>
               </div>
-              <div class="col-7 center why-us-text">THE BEST SECURITY</div>
+              <div class="col-7 left sm-center why-us-text">
+                THE BEST SECURITY
+              </div>
             </div>
             <div class="row why-us-row">
               <div class="col-3 center">
@@ -415,7 +392,7 @@
                   />
                 </svg>
               </div>
-              <div class="col-7 center why-us-text">100% GUARANTEE</div>
+              <div class="col-7 left sm-center why-us-text">100% GUARANTEE</div>
             </div>
             <div class="row why-us-row">
               <div class="col-3 center">
@@ -434,7 +411,7 @@
                   />
                 </svg>
               </div>
-              <div class="col-7 center why-us-text">QUICK LOCATION</div>
+              <div class="col-7 left sm-center why-us-text">QUICK LOCATION</div>
             </div>
           </div>
           <div class="container-fluid">
