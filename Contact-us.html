@@ -153,35 +153,39 @@
               alt="CONTACT US"
             />
             <h3 class="fw-normal text-secondary mb-3">QUICK FEEDBACK FORM</h3>
-            <form action="">
+            <form onsubmit="sendEmail(); reset(); return false ; ">
               <div class="row">
                 <div class="col-md-6 col-12">
                   <input
                     type="text"
+                    id="name"
                     class="form-control mb-3"
-                    placeholder="Your Full Name"
+                    placeholder="Name"
+                  />
+                </div>
+                <div class="col-md-6 col-12">
+                  <input
+                    type="email"
+                    id="email"
+                    class="form-control mb-3"
+                    placeholder="Email"
                   />
                 </div>
                 <div class="col-md-6 col-12">
                   <input
                     type="text"
+                    id="subject"
                     class="form-control mb-3"
-                    placeholder="Full name"
+                    placeholder="Subject"
                   />
                 </div>
-                <div class="col-md-3 col-12">
+
+                <div class="col-md-6 col-12">
                   <input
-                    type="text"
+                    type="number"
+                    id="phone"
                     class="form-control mb-3"
-                    placeholder="Full name"
-                  />
-                </div>
-                <div class="col-md-3 col-12"></div>
-                <div class="col-md-3 col-12">
-                  <input
-                    type="text"
-                    class="form-control mb-3"
-                    placeholder="Full name"
+                    placeholder="Phone Number"
                   />
                 </div>
                 <div class="col-md-3 col-12"></div>
@@ -189,11 +193,18 @@
                   <textarea
                     class="form-control mb-3"
                     rows="5"
-                    placeholder="Full name"
+                    id="message"
+                    placeholder="How can we help you ?"
                   ></textarea>
                 </div>
               </div>
-              <button class="btn btn-danger">Submit</button>
+              <button
+                class="btn btn-danger"
+                type="submit"
+                onclick="sendEmail()"
+              >
+                Submit
+              </button>
             </form>
           </div>
           <div class="col-lg-4 col-12">
@@ -484,5 +495,39 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+      function sendEmail() {
+        const name = document.getElementById("name").value; 
+        const email = document.getElementById("email").value ;
+        const subject = document.getElementById("subject").value;
+        const phone = document.getElementById("phone").value;
+        const message = document.getElementById("message").value;
+        const emaildata = {
+          name: name,
+          email: email,
+          subject: subject,
+          phone: phone,
+          message: message,
+        };
+
+        fetch("http://localhost:3000/sendemail", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(emaildata),
+        })
+          .then(function (data) {
+            return data.json();
+          })
+          .then(function (res) {
+            console.log(res);
+          })
+          .catch(function (err) {
+            console.error(err);
+          });
+      }
+    </script>
   </body>
 </html>

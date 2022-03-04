@@ -32,12 +32,13 @@ body {
 .header-container {
   background-color: #2f2f2f;
   padding: 5px 0px;
-  color: white;
+  color: red;
 }
 
 .contain-max-width {
   max-width: 1140px;
   margin: 0px auto;
+  background: transparent;
 }
 
 .carousel-item {
