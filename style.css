@@ -217,11 +217,6 @@ body {
   margin-top: 27px;
 }
 
-.service-line {
-  border: 1px solid var(--theme-color);
-  width: 100%;
-}
-
 .service-circle-background {
   width: 164px;
   height: 164px;
@@ -263,21 +258,12 @@ body {
   color: #444444 !important;
 }
 
-.service-line {
-  margin: 0 auto;
-  width: 17%;
-  height: 2px;
-  background-color: var(--theme-color);
-  position: relative;
-  top: 136px;
-  left: -19px;
-}
-
 .service-icon {
-  border-radius: 50%;
-  border: 2px solid var(--theme-color);
   width: 12rem;
   height: 12rem;
+  border-radius: 50%;
+  border: 2px solid var(--theme-color);
+  margin-left: calc(50vw - 7.5rem);
 }
 
 .service-number {
@@ -293,6 +279,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: calc(50vw - 7.5rem);
 }
 
 .service-text {
@@ -342,6 +329,7 @@ body {
   color: black;
   padding: 55px 15px 15px;
   font-weight: 700;
+  height: 70%;
 }
 
 .stat-number {
@@ -414,14 +402,12 @@ body {
   fill: white;
 }
 
+.service-process-item {
+  justify-content: center;
+}
+
 /* From tablet */
 @media (min-width: 576px) {
-  .green-line {
-    border: 2px solid var(--theme-color);
-    width: 100%;
-    margin-left: -25px;
-  }
-
   .sm-center {
     display: flex;
     justify-content: center;
@@ -431,5 +417,42 @@ body {
   .why-us-icons-background {
     margin-left: -25px;
     margin-right: 0;
+  }
+
+  .service-process-box {
+    display: flex;
+    justify-content: center;
+  }
+
+  .service-icon {
+    width: 12rem;
+    height: 12rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+  }
+
+  .service-number {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .green-line {
+    border: 2px solid var(--theme-color);
+    width: 100%;
+    margin-left: -25px;
+  }
+  .service-line {
+    border: 1px solid var(--theme-color);
+    width: 100%;
+    margin: 0 auto;
+    width: 17%;
+    height: 2px;
+    background-color: var(--theme-color);
+    position: relative;
+    top: 136px;
+    left: -19px;
   }
 }
