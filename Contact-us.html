@@ -99,8 +99,8 @@
                 <a
                   class="nav-link active fw-bold text-secondary"
                   aria-current="page"
-                  href="#"
-                  >CERTIFICATION</a
+                  href="./gallery.html"
+                  >GALLERY</a
                 >
               </div>
               <div class="nav-item">
@@ -205,13 +205,11 @@
                   ></textarea>
                 </div>
               </div>
-              <button
-                class="btn btn-danger mb-3"
-                type="submit"
-                onclick="sendEmail()"
-              >
-                Submit
-              </button>
+              <div id="form-submit-button">
+                <button class="btn btn-danger mb-3" type="submit">
+                  Submit
+                </button>
+              </div>
             </form>
           </div>
           <div class="col-lg-4 col-12">
@@ -515,6 +513,12 @@
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
       function sendEmail() {
+        document.getElementById("form-submit-button").innerHTML = `
+          <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        `;
+
         const name = document.getElementById("name").value;
         const email = document.getElementById("email").value;
         const subject = document.getElementById("subject").value;
@@ -528,7 +532,8 @@
           message: message,
         };
 
-        fetch("http://localhost:3000/sendemail", {
+        fetch("https://geoexports-mailer.herokuapp.com/sendemail", {
+          // fetch("http://localhost:3000/sendemail", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -539,10 +544,36 @@
             return data.json();
           })
           .then(function (res) {
-            console.log(res);
+            if (res.success === true) {
+              document.getElementById("form-submit-button").innerHTML = `
+                <div class="alert alert-success" role="alert">
+                  Thank You! Your message was sent successfully!
+                </div>
+                <button class="btn btn-danger mb-3" type="submit">
+                  Submit
+                </button>
+              `;
+            } else {
+              document.getElementById("form-submit-button").innerHTML = `
+                <div class="alert alert-danger" role="alert">
+                  Oops! Something went wrong. Please try again.
+                </div>
+                <button class="btn btn-danger mb-3" type="submit">
+                  Submit
+                </button>
+              `;
+            }
           })
           .catch(function (err) {
             console.error(err);
+            document.getElementById("form-submit-button").innerHTML = `
+                <div class="alert alert-danger" role="alert">
+                  Oops! Something went wrong. Please try again.
+                </div>
+                <button class="btn btn-danger mb-3" type="submit">
+                  Submit
+                </button>
+              `;
           });
       }
     </script>
