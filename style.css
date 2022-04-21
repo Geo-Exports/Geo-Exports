@@ -168,6 +168,10 @@ body {
   background-color: var(--theme-color) !important;
 }
 
+.card {
+  height: 100%;
+}
+
 .read-more-arrow {
   fill: var(--theme-color);
 }
